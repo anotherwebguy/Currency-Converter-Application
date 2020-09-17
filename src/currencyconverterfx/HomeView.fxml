@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="currencyconverterfx.HomeViewController">
+   <children>
+      <ToolBar layoutY="-1.0" prefHeight="39.0" prefWidth="700.0" style="-fx-background-color: blue;">
+         <items>
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold; -fx-text-alignment: center;" text="Currency Converter FX" textAlignment="CENTER" textFill="#f5efef">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </items>
+      </ToolBar>
+      <ImageView fitHeight="454.0" fitWidth="700.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/blac2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="219.0" layoutY="49.0" prefHeight="29.0" prefWidth="264.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="Enter the Amount to be Converted:-" textFill="WHITE" />
+      <Label layoutX="86.0" layoutY="125.0" prefHeight="23.0" prefWidth="58.0" style="-fx-font-weight: bold;" text="FROM" textFill="WHITE" />
+      <Label layoutX="564.0" layoutY="128.0" prefHeight="23.0" prefWidth="46.0" style="-fx-font-weight: bold;" text="TO" textFill="WHITE" />
+      <Button layoutX="293.0" layoutY="250.0" mnemonicParsing="false" onAction="#convert" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: green;" text="CONVERT">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label fx:id="label" alignment="CENTER_RIGHT" layoutX="182.0" layoutY="314.0" prefHeight="39.0" prefWidth="339.0" style="-fx-background-color: white;" text="0" textAlignment="RIGHT">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="330.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/images%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtValue" layoutX="217.0" layoutY="86.0" prefHeight="39.0" prefWidth="264.0" style="-fx-background-color: white;">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <ComboBox fx:id="combobox1" layoutX="40.0" layoutY="151.0" prefHeight="32.0" prefWidth="156.0" promptText="Select Currency" style="-fx-background-color: #ADFF2F;" />
+      <ComboBox fx:id="combobox2" layoutX="506.0" layoutY="153.0" prefHeight="32.0" prefWidth="156.0" promptText="Select Currency" style="-fx-background-color: #ADFF2F;" />
+      <Button layoutX="642.0" layoutY="38.0" mnemonicParsing="false" onAction="#close" prefHeight="29.0" prefWidth="58.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="EXIT" textFill="WHITE" />
+   </children>
+</AnchorPane>
