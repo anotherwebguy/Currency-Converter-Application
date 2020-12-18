@@ -18,10 +18,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 
-/**
- *
- * @author Rohit
- */
 public class HomeViewController implements Initializable {
     
     @FXML
