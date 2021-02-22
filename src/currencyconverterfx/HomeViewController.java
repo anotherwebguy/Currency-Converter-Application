@@ -18,10 +18,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 
-/**
- *
- * @author Rohit
- */
 public class HomeViewController implements Initializable {
     
     @FXML
@@ -33,8 +29,8 @@ public class HomeViewController implements Initializable {
     @FXML
     private ComboBox<String> combobox2;
     
-    ObservableList<String> list1 = FXCollections.observableArrayList("USD","EUR","SAR","INR","PHP");
-    ObservableList<String> list2 = FXCollections.observableArrayList("USD","INR","PHP","EUR","SAR");
+    ObservableList<String> list1 = FXCollections.observableArrayList("USD","EUR","SAR","INR","PHP","BYR","AUD","BGN","CAD","DKK","BRL","MVR","RUB","GBP");
+    ObservableList<String> list2 = FXCollections.observableArrayList("USD","INR","PHP","EUR","SAR","BYR","AUD","BGN","CAD","DKK","BRL","MVR","RUB","GBP");
     
     MoneyConverterAPI convertapi = new MoneyConverterAPI();
     
@@ -54,7 +50,7 @@ public class HomeViewController implements Initializable {
 
     @FXML
     private void convert(ActionEvent event) throws IOException {
-        int value = Integer.parseInt(txtValue.getText());
+        double value = Integer.parseInt(txtValue.getText());
         String From = combobox1.getValue();
         String To = combobox2.getValue();
         

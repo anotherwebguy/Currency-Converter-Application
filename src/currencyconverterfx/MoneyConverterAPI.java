@@ -12,10 +12,6 @@ import java.net.URL;
 //
 import java.util.Scanner;
 
-/**
- *
- * @author Rohit
- */
 public class MoneyConverterAPI {
     private static final String API_KEY = "ENTER_YOUR_UNIQUE_KEY";
     private static final String USER_AGENT_ID = "Java/"+System.getProperty("java.version");
